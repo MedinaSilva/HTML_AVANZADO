@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="/styles.css">
+    <title>HTML AVANZADO</title>
+</head>
+<body>
+    <h1>HTML AVANZADO</h1>
+
+    <div class="container">
+        <form action="test.html" method="get">
+
+            <label for="email">Correo electrónico</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
+            <input type="submit" name="" id="" value="submit">
+
+            <input type="number">
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="test.html" method="post">
+
+            <label for="email">Correo electrónico</label>
+            <input type="text" id="email" name="email">
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password">
+
+            <input type="submit" name="" id="" value="submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="test.html" method="get">
+            Comida favorita
+            <input type="radio" id="radio1" name="fav_comida" value="pizza">
+            <label for="radio1">Pizza</label>
+            <input type="radio" id="radio2" name="fav_comida" value="sushi">
+            <label for="radio2">sushi</label>
+            <input type="radio" id="radio3" name="fav_comida" value="hamburgesa">
+            <label for="radio3">hamburgesa</label>
+
+            <input type="submit" name="" id="" value="submit">
+        </form>
+    </div>
+
+    <div class="container">
+        <form action="/test.html" method="get">
+            <input type="checkbox" name="Pollito" id="ingrediente1" value="Pollito">
+            <label for="ingrediente1">Pollito</label>
+
+            <input type="checkbox" name="Carnita" id="ingrediente2">
+            <label for="ingrediente2">Carnita</label>
+
+            <input type="checkbox" name="Pescado" id="ingrediente3">
+            <label for="ingrediente3">Pescado</label>
+
+            <input type="submit" name="" id="" value="submit">
+        </form>
+
+    </div>
+
+    <div class="container">
+        <form action="/test.html" method="get" id="form1">
+
+            <select name="pan" id="pan">
+                <option disabled selected value="">Seleccionar</option>
+                <option value="Integral">Integral</option>
+                <option value="Ajo">Ajo</option>
+                <option value="Keto">Keto friendly</option>
+                <option value="Dulce">Dulce</option>
+                <option value="Blanco">Blanco</option>
+                <option value="madre">Masa madre</option>
+                <option value="Horno">Horno</option>
+            </select>
+
+            <input type="date" name="start" id="start">
+            <input type="datetime-local" name="start-date-hour" id="start-date-hour">
+
+            <input type="submit" name="" id="" value="submit">
+
+            
+        </form>
+    </div>
+    <button>Boton real</button>
+    <button form="form1">Boton real</button>  <!-- casi no se usa porque para eso está el submit -->
+    <button onclick="myFunction()">Boton JS</button>
+    <div class="container">
+    <table>
+        <tr>
+            <th>Email</th>
+            <th>Nombre</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>k.medinasilva@hotmail.com</td>
+            <td>Karen Medina Silva</td>
+            <td>Aprobada</td>
+        </tr>
+        <tr>
+            <td>zabdiel.diaz@idr.edu.mx</td>
+            <td>Zabdiel Diaz</td>
+            <td>Reprobado</td>
+        </tr>
+        <tr>
+            <td>gilberto.lenin@dinosaurios.com</td>
+            <td>Gilberto Lenin</td>
+            <td>Reprobado</td>
+        </tr>
+        <tr>
+            <td>hugo.morales@pizza.com</td>
+            <td>Hugo Morales</td>
+            <td>Reprobado</td>
+        </tr>
+    </table>
+    </div>
+
+    <!-- Atributos que permiten combinar columnas -->
+
+    <div class="container">
+        <table>
+            <colgroup>
+                <col span="2" style="background-color: none;">
+                <col span="1" style="background-color: orange;">
+            </colgroup>
+
+            <tr>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Status</th>
+            </tr>
+
+            <tr>
+                <td>k.medinasilva@hotmail.com</td>
+                <td>Karen Medina Silva</td>
+                <td>Aprobada</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Atributos que permiten combinar columnas -->
+
+    <div class="container">
+        <table>
+            
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th colspan="2">Nombre y Status</th>  <!-- el colspan nos indica que una columna va a ocupar dos espacios -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>k.medinasilva@hotmail.com</td>
+                    <td>Karen Medina Silva</td>
+                    <td>Aprobada</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <table id="t3">
+            <colgroup>
+                <col span="3" style="background-color: none;">
+                <!-- <col span="1" style="background-color: none;"> -->
+                <col span="1" style="background-color: green;">
+            </colgroup>
+
+            <thead>
+                <tr id="tr3">
+                    <th id="th3" colspan="2">Email</th>
+                    <th id="th3">Username</th>
+                    <th id="th3" colspan="2">Status</th>  <!-- el colspan nos indica que una columna va a ocupar dos espacios -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="tr3">
+                    <td id="td3"><img src="/public/Pat.jpg" alt="Patrick Star" width="50px" height="50px"></td>
+                    <td id="td3">k.medinasilva@hotmail.com</td>
+                    <td id="td3">Pink_Pat</td>
+                    <td id="td3" rowspan="1">Active</td>
+                    <td id="td3">x</td>
+                </tr>
+            </tbody>
+            <!-- <tfoot>
+
+                <tr>
+
+                <th>Total</th>
+
+                <th>$7,750.00</th>
+
+                </tr>
+
+            </tfoot> -->
+        </table>
+    </div>
+
+    <div class="container">
+        <a href="https://www.google.com">Google</a>
+        <!-- Blank abre una pestaña nueva y direcciona al anclaje.-->
+        <a href="https://www.google.com" target="_blank">Google_b</a>
+
+        <a href="https://www.google.com" target="_self">Google_s</a>
+
+        <a href="https://www.google.com" target="_top">Google_t</a>
+        
+    </div>
+
+    <!-- a con href -->
+    <div class="container">
+        <a href="mailto:k.medinasilva@hotmail.com">correo</a>
+    </div>
+
+    <script>
+        function myFunction() {
+            alert("hola crayola :P");
+        }
+    </script>
+
+</body>
+</html>
